@@ -1,0 +1,13 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 210" fill="none">
+  <title>Ávila Soluções Empresariais</title>
+  <g transform="translate(12 18)">
+    <path d="M12 160 76 38C88 15 120 15 133 38L204 160H162L116 77C111 67 100 67 95 77L51 160H12Z" fill="#6B243E"/>
+    <path d="M12 160C68 99 133 62 211 55C150 82 104 119 69 160H12Z" fill="#24151D"/>
+  </g>
+  <path d="M258 30V176" stroke="#D6C3CC" stroke-width="2"/>
+  <text x="292" y="103" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" letter-spacing="3" fill="#6B243E">ÁVILA</text>
+  <text x="296" y="139" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="500" letter-spacing="5" fill="#24151D">SOLUÇÕES EMPRESARIAIS</text>
+  <path d="M296 169H365 M733 169H802" stroke="#6B243E" stroke-width="1.5"/>
+  <text x="549" y="175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="2.2" fill="#6B243E">SOLUÇÕES INTELIGENTES PARA EMPRESAS</text>
+</svg>
