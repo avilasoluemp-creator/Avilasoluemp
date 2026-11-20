@@ -48,7 +48,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Ávila Soluções Empresariais",
+              description: "Soluções digitais para empresas: sistemas personalizados, sites, CRM, ERP e automação empresarial.",
+              url: siteUrl.toString(),
+              email: "avilasoluemp@gmail.com",
+              contactPoint: { "@type": "ContactPoint", telephone: "+55 54 99164-0157", contactType: "customer service", availableLanguage: "Portuguese" },
+            }),
+          }}
+        />
+      </body>
     </html>
   );
 }

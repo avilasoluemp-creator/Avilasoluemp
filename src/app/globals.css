@@ -891,3 +891,53 @@ summary:focus-visible {
     padding: 20px;
   }
 }
+
+/* Conteúdo institucional e conversão */
+.value { background: #fff; }
+.value-grid, .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 17px; margin-top: 50px; }
+.value-card, .process-card { padding: 27px 23px; border: 1px solid #ece7df; background: #fff; border-radius: 5px; }
+.value-card > span, .process-card > span { color: var(--burgundy); font-family: var(--font-editorial); font-size: 27px; }
+.value-card h3, .process-card h3 { margin-top: 22px; color: var(--burgundy-dark); font-family: var(--font-editorial); font-size: 21px; font-weight: 500; }
+.value-card p, .process-card p { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.why { background: var(--cream-dark); }
+.check-list { display: grid; gap: 13px; margin-top: 25px; color: var(--burgundy-dark); font-size: 13px; font-weight: 700; }
+.process { background: #fff; }
+.process-card { min-height: 220px; }
+.faq { background: var(--cream); }
+.faq-list { max-width: 820px; margin-top: 45px; border-top: 1px solid #ddd3d0; }
+.faq-list details { border-bottom: 1px solid #ddd3d0; }
+.faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; color: var(--burgundy-dark); cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary span { color: var(--burgundy); font-size: 24px; font-weight: 400; }
+.faq-list details[open] summary span { transform: rotate(45deg); }
+.faq-list details p { max-width: 690px; padding: 0 40px 22px 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.contact { background: var(--burgundy-dark); color: #fff; }
+.contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: start; }
+.contact .section-title { color: #fff; }
+.contact .section-description { color: #d6c3cc; }
+.contact-links { display: grid; gap: 12px; margin-top: 28px; color: #e8dce1; font-size: 13px; font-weight: 700; }
+.contact-links a:hover { color: #fff; }
+.contact-form { display: grid; gap: 17px; padding: 30px; border: 1px solid rgba(255,255,255,.18); border-radius: 6px; background: rgba(255,255,255,.07); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+.contact-form label { display: grid; gap: 8px; color: #f3e9ed; font-size: 11px; font-weight: 700; }
+.contact-form input, .contact-form select, .contact-form textarea { width: 100%; border: 1px solid rgba(255,255,255,.22); border-radius: 4px; background: rgba(255,255,255,.09); color: #fff; padding: 13px; font: inherit; font-size: 13px; outline: none; }
+.contact-form select option { color: var(--foreground); }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #c8b8bf; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: #e5bdca; box-shadow: 0 0 0 3px rgba(229,189,202,.16); }
+.form-privacy, .form-status { color: #d6c3cc; font-size: 11px; line-height: 1.6; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.button-secondary-dark { background: transparent; cursor: pointer; }
+.form-status { padding: 12px; border-left: 2px solid #d5b7c2; }
+.footer-top { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); }
+
+@media (max-width: 900px) {
+  .value-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { gap: 45px; }
+  .footer-top { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 760px) {
+  .value-grid, .process-grid, .contact-grid, .form-grid { grid-template-columns: 1fr; }
+  .contact-form { padding: 22px; }
+  .faq-list summary { font-size: 14px; }
+  .footer-top { display: flex; }
+}

@@ -227,6 +227,15 @@
   margin-top: 50px;
 }
 
+.processGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 17px; margin-top: 45px; }
+.processCard { min-height: 210px; }
+.faqSection { padding: 105px 0; background: #fff; }
+.faqList { max-width: 820px; margin-top: 40px; border-top: 1px solid #ddd3d0; }
+.faqList details { border-bottom: 1px solid #ddd3d0; }
+.faqList summary { padding: 21px 0; color: var(--burgundy-dark); cursor: pointer; font-size: 14px; font-weight: 700; list-style: none; }
+.faqList summary::-webkit-details-marker { display: none; }
+.faqList p { padding: 0 0 21px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+
 .benefitCard,
 .processCard {
   min-height: 225px;
@@ -378,6 +387,8 @@
   .applicationsGrid {
     gap: 45px;
   }
+
+  .processGrid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 760px) {
@@ -421,6 +432,8 @@
   .benefitCard {
     min-height: auto;
   }
+
+  .processGrid { grid-template-columns: 1fr; }
 
   .cta {
     padding: 75px 0;

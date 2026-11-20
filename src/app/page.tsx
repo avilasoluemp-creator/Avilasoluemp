@@ -1,326 +1,36 @@
 import Link from "next/link";
 import Image from "next/image";
 import Header from "./components/Header";
+import ContactForm from "./components/ContactForm";
 
+const whatsapp = "https://wa.me/5554991640157?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20uma%20solu%C3%A7%C3%A3o%20digital%20com%20a%20%C3%81vila.";
 const services = [
-  {
-    number: "01",
-    slug: "sistemas-personalizados",
-    icon: "⌘",
-    title: "Sistemas personalizados",
-    description:
-      "Desenvolvemos sistemas sob medida para organizar processos, integrar informações e resolver desafios específicos da sua empresa.",
-  },
-  {
-    number: "02",
-    slug: "sites-institucionais",
-    icon: "◈",
-    title: "Sites institucionais",
-    description:
-      "Criamos experiências digitais profissionais para fortalecer sua marca, apresentar seus serviços e conquistar novos clientes.",
-  },
-  {
-    number: "03",
-    slug: "crm-erp",
-    icon: "▦",
-    title: "CRM e ERP",
-    description:
-      "Soluções para gestão empresarial, relacionamento com clientes, controle operacional e tomada de decisões.",
-  },
-  {
-    number: "04",
-    slug: "automacao-empresarial",
-    icon: "⟳",
-    title: "Automação empresarial",
-    description:
-      "Automatizamos tarefas e processos para reduzir atividades manuais, melhorar a produtividade e ganhar eficiência.",
-  },
+  ["01", "sistemas-personalizados", "⌘", "Sistemas personalizados", "Soluções sob medida para organizar processos, integrar informações e resolver desafios específicos."],
+  ["02", "sites-institucionais", "◈", "Sites institucionais", "Sites profissionais, responsivos e estratégicos para fortalecer sua presença digital."],
+  ["03", "crm-erp", "▦", "CRM e ERP", "Mais controle sobre clientes, informações comerciais e processos administrativos."],
+  ["04", "automacao-empresarial", "⟳", "Automação empresarial", "Integração de ferramentas e fluxos para reduzir tarefas manuais e melhorar a operação."],
+] as const;
+const faq = [
+  ["Quais tipos de sistemas a Ávila desenvolve?", "Desenvolvemos sistemas internos, plataformas administrativas, painéis, portais e outras soluções definidas conforme a necessidade do negócio."],
+  ["Os sistemas podem ser personalizados?", "Sim. O escopo é construído a partir dos processos, regras de negócio e prioridades da sua empresa."],
+  ["A Ávila desenvolve sites para qualquer segmento?", "Analisamos o contexto de cada empresa e criamos uma estrutura de conteúdo e experiência adequada ao seu público."],
+  ["É possível integrar diferentes ferramentas?", "Sim. A viabilidade e o escopo da integração são avaliados durante o entendimento técnico do projeto."],
+  ["Como funciona a contratação?", "Começamos com uma conversa sobre o desafio, estruturamos uma proposta e, após a aprovação do escopo, iniciamos o desenvolvimento."],
+  ["Como solicitar um orçamento?", "Use o formulário desta página, envie um e-mail ou converse conosco pelo WhatsApp."],
 ];
 
 export default function Home() {
-  return (
-    <>
-      {/* HEADER */}
-
-      <Header />
-
-      <main>
-        {/* HERO */}
-
-        <section className="hero" id="inicio">
-          <div className="container hero-inner">
-            <div className="hero-content">
-              <span className="eyebrow hero-eyebrow">
-                TECNOLOGIA · ESTRATÉGIA · INOVAÇÃO
-              </span>
-
-              <h1 className="hero-title">
-                Transformamos ideias em <span>soluções digitais.</span>
-              </h1>
-
-              <p className="hero-description">
-                Desenvolvemos sistemas, plataformas e experiências digitais que
-                conectam tecnologia às necessidades reais do seu negócio.
-              </p>
-
-              <div className="hero-actions">
-                <Link href="#servicos" className="button-primary">
-                  Conheça nossas soluções <span>→</span>
-                </Link>
-
-                <Link href="#sobre" className="button-secondary">
-                  Conheça a Ávila
-                </Link>
-              </div>
-            </div>
-
-            <div className="hero-visual" aria-hidden="true">
-              <div className="visual-orbit" />
-
-              <div className="visual-card">
-                <div className="visual-card-top">
-                  <span className="visual-card-label">
-                    ÁVILA DIGITAL ECOSYSTEM
-                  </span>
-                  <span className="visual-status" />
-                </div>
-
-                <h2 className="visual-card-title">Tecnologia com propósito.</h2>
-
-                <p className="visual-card-description">
-                  Soluções digitais desenvolvidas para acompanhar a evolução dos
-                  negócios.
-                </p>
-
-                <div className="visual-metrics">
-                  <div className="metric">
-                    <div className="metric-number">01</div>
-                    <div className="metric-label">Estratégia</div>
-                  </div>
-
-                  <div className="metric">
-                    <div className="metric-number">02</div>
-                    <div className="metric-label">Tecnologia</div>
-                  </div>
-
-                  <div className="metric">
-                    <div className="metric-number">03</div>
-                    <div className="metric-label">Desenvolvimento</div>
-                  </div>
-
-                  <div className="metric">
-                    <div className="metric-number">04</div>
-                    <div className="metric-label">Evolução</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* POSICIONAMENTO */}
-
-        <section className="trust-strip">
-          <div className="container trust-inner">
-            <div className="trust-item">
-              <span className="trust-number">01</span>
-              <span className="trust-label">
-                Tecnologia alinhada aos objetivos do negócio
-              </span>
-            </div>
-
-            <div className="trust-item">
-              <span className="trust-number">02</span>
-              <span className="trust-label">
-                Soluções pensadas para cada necessidade
-              </span>
-            </div>
-
-            <div className="trust-item">
-              <span className="trust-number">03</span>
-              <span className="trust-label">
-                Desenvolvimento com visão de longo prazo
-              </span>
-            </div>
-          </div>
-        </section>
-
-        {/* SERVIÇOS */}
-
-        <section className="section services" id="servicos">
-          <div className="container">
-            <span className="eyebrow">NOSSAS SOLUÇÕES</span>
-
-            <h2 className="section-title">
-              Tecnologia para cada etapa da evolução da sua empresa.
-            </h2>
-
-            <p className="section-description">
-              Combinamos conhecimento técnico e visão empresarial para
-              desenvolver soluções digitais que fazem sentido para a realidade
-              de cada negócio.
-            </p>
-
-            <div className="services-grid">
-              {services.map((service) => (
-                <article className="service-card" key={service.number}>
-                  <div className="service-icon">{service.icon}</div>
-
-                  <span className="eyebrow">SOLUÇÃO {service.number}</span>
-
-                  <h3>{service.title}</h3>
-
-                  <p>{service.description}</p>
-
-                  <Link
-                    href={`/servicos/${service.slug}`}
-                    className="service-link"
-                    aria-label={`Saiba mais sobre ${service.title}`}
-                  >
-                    Saiba mais <span>↗</span>
-                  </Link>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SOBRE */}
-
-        <section className="section about" id="sobre">
-          <div className="container about-inner">
-            <div className="about-visual">
-              <div className="about-visual-content">
-                <div className="about-monogram">Á.</div>
-                <p>
-                  INTELIGÊNCIA DIGITAL
-                  <br />
-                  PARA NEGÓCIOS REAIS
-                </p>
-              </div>
-            </div>
-
-            <div className="about-copy">
-              <span className="eyebrow">SOBRE A ÁVILA</span>
-
-              <h2 className="section-title">
-                Mais do que desenvolver tecnologia, queremos transformar a
-                maneira como empresas evoluem.
-              </h2>
-
-              <p>
-                A Ávila Soluções Empresariais nasce com o propósito de aproximar
-                a tecnologia da realidade das empresas. Acreditamos que
-                ferramentas digitais devem simplificar processos, ampliar
-                possibilidades e gerar valor.
-              </p>
-
-              <p>
-                Por isso, desenvolvemos soluções que consideram as necessidades,
-                os desafios e os objetivos de cada negócio.
-              </p>
-
-              <Link href="#contato" className="about-link">
-                Vamos conversar sobre seu projeto ↗
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* CONTATO */}
-
-        <section className="section cta" id="contato">
-          <div className="container cta-inner">
-            <div>
-              <span className="eyebrow hero-eyebrow">
-                SEU PRÓXIMO PROJETO COMEÇA AQUI
-              </span>
-
-              <h2 className="section-title">
-                Sua empresa está pronta para evoluir?
-              </h2>
-
-              <p>
-                Vamos conversar sobre suas necessidades e descobrir como a
-                tecnologia pode ajudar seu negócio.
-              </p>
-            </div>
-
-            <div className="cta-actions">
-              <a
-                href="https://wa.me/5554991640157?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20um%20projeto%20com%20a%20%C3%81vila."
-                className="button-primary"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Fale com a Ávila pelo WhatsApp ↗
-              </a>
-              <a
-                href="mailto:avilasoluemp@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20or%C3%A7amento"
-                className="button-secondary"
-              >
-                Envie um e-mail
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      {/* FOOTER */}
-
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-top">
-            <div>
-              <Link href="/" className="brand footer-brand" aria-label="Ávila - Página inicial">
-                <Image
-                  src="/brand/logo-reverse.svg"
-                  alt="Ávila Soluções Empresariais"
-                  width={920}
-                  height={210}
-                  className="brand-logo footer-logo"
-                />
-              </Link>
-
-              <p className="footer-description">
-                Tecnologia, estratégia e desenvolvimento de soluções digitais
-                para empresas que desejam evoluir.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="footer-heading">NAVEGAÇÃO</h3>
-
-              <div className="footer-links">
-                <Link href="#inicio">Início</Link>
-                <Link href="#servicos">Soluções</Link>
-                <Link href="#sobre">Sobre nós</Link>
-                <Link href="#contato">Contato</Link>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="footer-heading">SOLUÇÕES</h3>
-
-              <div className="footer-links">
-                {services.map((service) => (
-                  <Link href={`/servicos/${service.slug}`} key={service.slug}>
-                    {service.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <span>
-              © 2026 Ávila Soluções Empresariais. Todos os direitos reservados.
-            </span>
-
-            <span>Desenvolvido com tecnologia e propósito.</span>
-          </div>
-        </div>
-      </footer>
-    </>
-  );
+  return <>
+    <Header />
+    <main>
+      <section className="hero" id="inicio"><div className="container hero-inner"><div className="hero-content"><span className="eyebrow hero-eyebrow">TECNOLOGIA · ESTRATÉGIA · INOVAÇÃO</span><h1 className="hero-title">Transformamos desafios empresariais em <span>soluções digitais.</span></h1><p className="hero-description">Desenvolvemos sistemas personalizados, sites profissionais e automações que ajudam empresas a organizar processos, otimizar operações e crescer com tecnologia.</p><div className="hero-actions"><Link href="#servicos" className="button-primary">Conheça nossas soluções <span>→</span></Link><Link href="#contato" className="button-secondary">Fale com um especialista</Link></div></div><div className="hero-visual" aria-label="Demonstração conceitual de uma interface digital"><div className="visual-orbit" /><div className="visual-card"><div className="visual-card-top"><span className="visual-card-label">DEMONSTRAÇÃO CONCEITUAL</span><span className="visual-status" /></div><h2 className="visual-card-title">Tecnologia com propósito.</h2><p className="visual-card-description">Uma representação ilustrativa de como dados, processos e decisões podem se conectar.</p><div className="visual-metrics">{["Estratégia", "Tecnologia", "Desenvolvimento", "Evolução"].map((item, index) => <div className="metric" key={item}><div className="metric-number">0{index + 1}</div><div className="metric-label">{item}</div></div>)}</div></div></div></div></section>
+      <section className="value section" id="proposta"><div className="container"><span className="eyebrow">NOSSO PROPÓSITO</span><h2 className="section-title">Tecnologia que trabalha a favor do seu negócio.</h2><p className="section-description">Antes de propor uma ferramenta, buscamos compreender a operação e os objetivos da empresa.</p><div className="value-grid">{[["01", "Eficiência operacional", "Menos retrabalho e processos mais claros para a rotina empresarial."], ["02", "Processos organizados", "Informações estruturadas para facilitar o acompanhamento do negócio."], ["03", "Soluções personalizadas", "Cada projeto considera o contexto e as prioridades da empresa."], ["04", "Tecnologia alinhada", "Desenvolvimento orientado pelo que faz sentido para sua operação."]].map(([n, t, d]) => <article className="value-card" key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div></div></section>
+      <section className="section services" id="servicos"><div className="container"><span className="eyebrow">NOSSAS SOLUÇÕES</span><h2 className="section-title">Tecnologia para cada etapa da evolução da sua empresa.</h2><p className="section-description">Conheça as frentes em que podemos ajudar a organizar, digitalizar e automatizar seu negócio.</p><div className="services-grid">{services.map(([number, slug, icon, title, description]) => <article className="service-card" key={slug}><div className="service-icon" aria-hidden="true">{icon}</div><span className="eyebrow">SOLUÇÃO {number}</span><h3>{title}</h3><p>{description}</p><Link href={`/servicos/${slug}`} className="service-link">Conhecer solução <span>↗</span></Link></article>)}</div></div></section>
+      <section className="section why" id="sobre"><div className="container"><div className="about-inner"><div className="about-visual"><div className="about-visual-content"><div className="about-monogram">Á.</div><p>INTELIGÊNCIA DIGITAL<br />PARA NEGÓCIOS REAIS</p></div></div><div className="about-copy"><span className="eyebrow">POR QUE A ÁVILA?</span><h2 className="section-title">Mais do que desenvolver tecnologia, buscamos simplificar a rotina das empresas.</h2><p>Somos uma empresa em fase inicial, construída com o compromisso de compreender cada negócio antes de propor uma solução.</p><div className="check-list">{["Atendimento próximo e personalizado", "Desenvolvimento sob medida", "Comunicação clara durante o projeto", "Foco em eficiência e organização"].map((item) => <span key={item}>✓ {item}</span>)}</div></div></div></div></section>
+      <section className="process section" id="processo"><div className="container"><span className="eyebrow">COMO TRABALHAMOS</span><h2 className="section-title">Um processo claro para tirar a ideia do papel.</h2><div className="process-grid">{[["01", "Entendimento", "Conversamos para compreender os desafios e as necessidades da empresa."], ["02", "Planejamento", "Estruturamos uma proposta de solução adequada ao cenário apresentado."], ["03", "Desenvolvimento", "Construímos a solução conforme o escopo aprovado."], ["04", "Entrega e acompanhamento", "Realizamos a entrega e orientamos sobre a utilização da solução."]].map(([n, t, d]) => <article className="process-card" key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div></div></section>
+      <section className="faq section"><div className="container"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2 className="section-title">Dúvidas sobre como podemos ajudar?</h2><div className="faq-list">{faq.map(([q, a]) => <details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div></section>
+      <section className="contact section" id="contato"><div className="container contact-grid"><div><span className="eyebrow">FALE COM A ÁVILA</span><h2 className="section-title">Seu negócio pode funcionar melhor com a tecnologia certa.</h2><p className="section-description">Conte para nós quais são os desafios da sua empresa. Vamos conversar sobre uma solução adequada às suas necessidades.</p><div className="contact-links"><a href={whatsapp} target="_blank" rel="noreferrer">Conversar pelo WhatsApp ↗</a><a href="mailto:avilasoluemp@gmail.com">avilasoluemp@gmail.com</a></div></div><ContactForm /></div></section>
+    </main>
+    <footer className="footer"><div className="container"><div className="footer-top"><div><Link href="/" className="brand footer-brand"><Image src="/brand/logo-reverse.svg" alt="Ávila Soluções Empresariais" width={920} height={210} className="brand-logo footer-logo" /></Link><p className="footer-description">Soluções digitais para empresas que desejam organizar processos e evoluir com tecnologia.</p></div><div><h3 className="footer-heading">NAVEGAÇÃO</h3><div className="footer-links"><Link href="#inicio">Início</Link><Link href="#servicos">Soluções</Link><Link href="#sobre">Sobre nós</Link><Link href="#processo">Como trabalhamos</Link><Link href="#contato">Contato</Link></div></div><div><h3 className="footer-heading">SOLUÇÕES</h3><div className="footer-links">{services.map(([, slug, , title]) => <Link href={`/servicos/${slug}`} key={slug}>{title}</Link>)}</div></div><div><h3 className="footer-heading">CONTATO</h3><div className="footer-links"><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:avilasoluemp@gmail.com">E-mail</a></div></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Ávila Soluções Empresariais. Todos os direitos reservados.</span><span>Desenvolvido com tecnologia e propósito.</span></div></div></footer>
+  </>;
 }

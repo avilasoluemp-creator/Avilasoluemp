@@ -313,6 +313,22 @@ async function ServiceContent({ params }: PageProps) {
           </div>
         </section>
 
+        <section className={styles.section}>
+          <div className="container">
+            <span className={styles.eyebrow}>COMO DESENVOLVEMOS</span>
+            <h2 className={styles.sectionTitle}>Do entendimento à entrega, com clareza em cada etapa.</h2>
+            <div className={styles.processGrid}>
+              {["Entendimento da necessidade", "Planejamento do escopo", "Desenvolvimento da solução", "Entrega e orientação"].map((step, index) => (
+                <article className={styles.processCard} key={step}><span className={styles.cardNumber}>0{index + 1}</span><h3>{step}</h3><p>Definimos os próximos passos em conjunto, conforme o contexto e as condições acordadas para o projeto.</p></article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.faqSection}>
+          <div className="container"><span className={styles.eyebrow}>DÚVIDAS SOBRE ESTA SOLUÇÃO</span><h2 className={styles.sectionTitle}>Vamos avaliar o que faz sentido para sua empresa?</h2><div className={styles.faqList}><details><summary>O escopo pode ser adaptado?</summary><p>Sim. A proposta é estruturada a partir das prioridades e necessidades identificadas na conversa inicial.</p></details><details><summary>Como começo uma conversa sobre este serviço?</summary><p>Você pode solicitar um orçamento pelo formulário da página inicial ou falar diretamente pelo WhatsApp.</p></details></div></div>
+        </section>
+
         <section className={styles.cta}>
           <div className={`container ${styles.ctaInner}`}>
             <div>

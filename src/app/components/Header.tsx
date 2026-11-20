@@ -20,6 +20,7 @@ export default function Header() {
           <Link href="/#inicio">Início</Link>
           <Link href="/#servicos">Soluções</Link>
           <Link href="/#sobre">Sobre nós</Link>
+          <Link href="/#processo">Como trabalhamos</Link>
           <Link href="/#contato">Contato</Link>
         </nav>
 
@@ -37,6 +38,7 @@ export default function Header() {
             <Link href="/#inicio">Início</Link>
             <Link href="/#servicos">Soluções</Link>
             <Link href="/#sobre">Sobre nós</Link>
+            <Link href="/#processo">Como trabalhamos</Link>
             <Link href="/#contato">Contato</Link>
           </nav>
         </details>
